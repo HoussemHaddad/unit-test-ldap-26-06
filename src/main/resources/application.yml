@@ -1,0 +1,24 @@
+# Spring LDAP Mapping Attributes to POJO with AttributesMapper configuration application.yml
+
+spring:
+  ldap:
+    embedded:
+      base-dn: dc=springframework,dc=org
+      credential:
+        username: uid=admin
+        password: secret
+      ldif: classpath:test-server.ldif
+      port: 12345
+      validation:
+        enabled: false
+
+
+ldap:
+  url: ldap://localhost:12345
+  base-dn: dc=springframework,dc=org
+  credential:
+    username: uid=admin
+    password: secret
+
+server:
+  port: 8085
